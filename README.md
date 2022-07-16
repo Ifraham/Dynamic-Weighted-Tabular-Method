@@ -12,3 +12,5 @@ Bibtex - @article{iqbal2022dynamic,
 
 MLA Citation - Iqbal, Md Ifraham, et al. "A Dynamic Weighted Tabular Method for Convolutional Neural Networks." arXiv preprint arXiv:2205.10386 (2022).
 
+How to Use:
+
