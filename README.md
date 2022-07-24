@@ -15,7 +15,7 @@ MLA Citation - Iqbal, Md Ifraham, et al. "A Dynamic Weighted Tabular Method for 
 ##How to Use:
 **Instructions**
 
-Before application please make sure that the Dataset is viable for DWTM application.
+Before application please make sure that the Dataset is viable for DWTM application:
 - Ensure that there are no missing values
 - Ensure that the independent variable (Class) is the final column in the dataset
 - Ensure that your label/prediction column of the dataset is named "Class"
@@ -25,10 +25,10 @@ Use the *DWTM_Implement_Image_Creation.ipynb* or alternatively follow these step
 
 Upload the following python files from the directory *DWTM* to working directory and import the classes within them:
 
-1 1.1 Data_Processing_Numerical.py
-2 1.2 Data_Processing_Categorical.py
-3 2.1 Image_Canvas_Creation.py
-4 3.1 Image_Generate.py
+- 1.1 Data_Processing_Numerical.py
+- 1.2 Data_Processing_Categorical.py
+- 2.1 Image_Canvas_Creation.py
+- 3.1 Image_Generate.py
 
 Process your input Dataset to create a Processed Dataset. Save the Processed Dataset in the working directory.
 
