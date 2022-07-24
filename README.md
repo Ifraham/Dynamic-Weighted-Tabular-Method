@@ -50,7 +50,6 @@ Zip and Download the Image Dataset
 
 Use an image classification codebase to obtain your results on the Image Dataset. If required you can use the Image_Classification_Pytorch.ipnyb to classify the Image dataset and obtain your results.
 
-Point to be noted
-
+**Point to be noted**
 For Step-2 , File 1.1 can be applied on all kinds of datasets, however it is highly recommended to use File 1.2 for application on datasets containing Categorical Data as 1.1 will lead to inaccurate calculation of the feature weights of the categorical variables.
 
