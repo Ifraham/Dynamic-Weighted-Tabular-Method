@@ -30,15 +30,80 @@ Upload the following python files from the directory *DWTM* to working directory
 - 2.1 Image_Canvas_Creation.py
 - 3.1 Image_Generate.py
 
+```python
+!git clone https://github.com/AnonymousCIKM1/DWTM.git
+%cd /content/DWTM/DWTM
+from DWTM import*
+from Data_Processing_Categorical import Datapreprocessing as DataPreprocessingCategorical
+from Data_Processing_Numerical import Datapreprocessing as DataPreprocessingNumerical
+from Image_Canvas_Creation import ImageDatasetCreation 
+from Image_Generate import ImageGenerate
+```
+
 Process your input Dataset to create a Processed Dataset. Save the Processed Dataset in the working directory.
 
-For datasets with only Numerical Data - Use 1.1 Data_Processing_Numerical.py
+```python
 
-For datasets containing Categorical Data - Use 1.2 Data_Processing_Categorical.py
+data_path = 'enter your data path'
+z = 1
 
-Use the Proccessed Dataset to successfully divide the Canvas Space. Use 2.1 Image_Canvas_Creation.py for Canvas Space Creation
+PD = DataPreprocessingNumerical(data_path)
+#print(yo)
+r = PD.r_scores()
+print(r)
+#yo.column_rename('/content/ProcessedDataset.csv')
+```
+
+-For datasets with only Numerical Data - Use 1.1 Data_Processing_Numerical.py
+
+-For datasets containing Categorical Data - Use 1.2 Data_Processing_Categorical.py
+
+
+
+Use the Processed Dataset to successfully divide the Canvas Space. Use 2.1 Image_Canvas_Creation.py for Canvas Space Creation
+```python
+#Processed Dataset Path
+ImageCanvasCreation = ImageDatasetCreation('/content/DWTM/DWTM/ProcessedDataset.csv') 
+
+feature_no, c = ImageCanvasCreation.pre_preinsertion()
+
+m = 128 #Change according to preference
+n= 128  #Change according to preference
+#Image size of 128 by 128 is being used
+
+s_list, h_list = ImageCanvasCreation.preinsertion(c,r,m,n,feature_no)
+print(s_list)
+print(h_list)
+```
 
 Create the Image Dataset using the Processed Dataset and Canvas Space information. Use 3.1 Image_Generate.py to create Image Dataset
+```python
+import pandas as pd
+#Path for Processed Dataset
+im = ImageGenerate('/content/DWTM/DWTM/ProcessedDataset.csv')
+csv_path = "/content/DWTM/DWTM/ProcessedDataset.csv"
+csv_path2 = data_path
+df2 = pd.read_csv(csv_path2)
+if len(s_list)!=len(h_list):
+  h_list.pop()
+df = pd.read_csv(csv_path)
+df.info()
+for i in range(0,df.shape[0]):
+  class_name = df.iloc[i]['Class']#.astype(int) #Why type is Int?
+  #dmc =df.iloc[i]['Zone Name']
+  #da =df.iloc[i]["Date"]
+  image_file_name =  str(i)
+  #ccc,  data = count_chars_val(d)
+  
+  data = []
+  for i, v in enumerate(df.loc[i].to_list()):
+    if i!=2:
+      data.append(v)
+
+  img_height = 128 #Change according to preference, match with m and n of Part 3
+  img_width = 128 #Change according to preference, match with m and n of Part 3
+  test_img = im.image_generator(data,class_name=class_name, s_list=s_list, h_list=h_list, img_height=128, img_width=128, image_file_name=image_file_name)
+```
 
 Zip and Download the Image Dataset
 
