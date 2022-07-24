@@ -17,7 +17,9 @@ Instructions
 Before application please make sure that the Dataset is viable for DWTM application.
 
 -Ensure that there are no missing values
+
 -Ensure that the independent variable (Class) is the final column in the dataset
+
 -Ensure that your label/prediction column of the dataset is named "Class"
 
 
@@ -26,19 +28,26 @@ Use the *DWTM_Implement_Image_Creation.ipynb* or alternatively follow these step
 Upload the following python files from the directory *DWTM* to working directory and import the classes within them:
 
 1.1 Data_Processing_Numerical.py
+
 1.2 Data_Processing_Categorical.py
+
 2.1 Image_Canvas_Creation.py
+
 3.1 Image_Generate.py
+
 Process your input Dataset to create a Processed Dataset. Save the Processed Dataset in the working directory.
 
 For datasets with only Numerical Data - Use 1.1 Data_Processing_Numerical.py
+
 For datasets containing Categorical Data - Use 1.2 Data_Processing_Categorical.py
+
 Use the Proccessed Dataset to successfully divide the Canvas Space. Use 2.1 Image_Canvas_Creation.py for Canvas Space Creation
+
 Create the Image Dataset using the Processed Dataset and Canvas Space information. Use 3.1 Image_Generate.py to create Image Dataset
 
 Zip and Download the Image Dataset
 
-Use an image classification codebase to obtain your results on the Image Dataset. If required you can use the Image_Classification_Pytorch.ipnyb from Drive Link to classify the Image dataset and obtain your results.
+Use an image classification codebase to obtain your results on the Image Dataset. If required you can use the Image_Classification_Pytorch.ipnyb to classify the Image dataset and obtain your results.
 
 Point to be noted
 
