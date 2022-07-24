@@ -68,7 +68,7 @@ ImageCanvasCreation = ImageDatasetCreation('/content/DWTM/DWTM/ProcessedDataset.
 feature_no, c = ImageCanvasCreation.pre_preinsertion()
 
 m = 128 #Change according to preference
-n= 128  #Change according to preference
+n = 128  #Change according to preference
 #Image size of 128 by 128 is being used
 
 s_list, h_list = ImageCanvasCreation.preinsertion(c,r,m,n,feature_no)
@@ -89,9 +89,7 @@ if len(s_list)!=len(h_list):
 df = pd.read_csv(csv_path)
 df.info()
 for i in range(0,df.shape[0]):
-  class_name = df.iloc[i]['Class']#.astype(int) #Why type is Int?
-  #dmc =df.iloc[i]['Zone Name']
-  #da =df.iloc[i]["Date"]
+  class_name = df.iloc[i]['Class']#.astype(int) 
   image_file_name =  str(i)
   #ccc,  data = count_chars_val(d)
   
