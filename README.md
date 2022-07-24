@@ -16,9 +16,9 @@ MLA Citation - Iqbal, Md Ifraham, et al. "A Dynamic Weighted Tabular Method for 
 **Instructions**
 
 Before application please make sure that the Dataset is viable for DWTM application.
-Markup : * Ensure that there are no missing values
-         * Ensure that the independent variable (Class) is the final column in the dataset
-         * Ensure that your label/prediction column of the dataset is named "Class"
+Markup : - Ensure that there are no missing values
+         - Ensure that the independent variable (Class) is the final column in the dataset
+         - Ensure that your label/prediction column of the dataset is named "Class"
 
 
 Use the *DWTM_Implement_Image_Creation.ipynb* or alternatively follow these steps for successful implementation of the DWTM. For applying Steps 2-5, run the cells mentioned below. The notebook is numbered to make it easier to follow:
