@@ -25,10 +25,10 @@ Use the *DWTM_Implement_Image_Creation.ipynb* or alternatively follow these step
 
 Upload the following python files from the directory *DWTM* to working directory and import the classes within them:
 
-1.1 Data_Processing_Numerical.py
-1.2 Data_Processing_Categorical.py
-2.1 Image_Canvas_Creation.py
-3.1 Image_Generate.py
+1 1.1 Data_Processing_Numerical.py
+2 1.2 Data_Processing_Categorical.py
+3 2.1 Image_Canvas_Creation.py
+4 3.1 Image_Generate.py
 
 Process your input Dataset to create a Processed Dataset. Save the Processed Dataset in the working directory.
 
