@@ -219,15 +219,14 @@ class ImageDatasetCreation(object):
     while len(f)!=0:
     
 
-        self.features_insertion(m,n,a,l,h,c,f,s_list,A,L,H,C,F,arr) ###FOR FURKAN - Try t bvo complete Function in next line. I will look at it after I wake up
-        #updateValues(m,n,a,l,h,c,f)      #Starting List and others needs to be updated based on third set of variables declared just before this loop
-        #info(s_list,m,n,a,l,h,c,f)
+        self.features_insertion(m,n,a,l,h,c,f,s_list,A,L,H,C,F,arr) 
+        
         
         h,l,a = self.trim(m,n,a,l,h,c,f,arr)
         self.excludedFeatures(m,n,s_list,h,arr)
         
 
-        #findStartingList(m,n,a,l,h,c,f)
+        
         count = count+1
         if count>50:
             break
